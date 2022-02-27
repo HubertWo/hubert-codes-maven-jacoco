@@ -11,7 +11,7 @@
     <repositories>
         <repository>
             <id>hubert-codes-maven-jacoco</id>
-            <url>https://github.com/HubertWo/hubert-codes-maven-test</url>
+            <url>https://github.com/HubertWo/hubert-codes-maven-jacoco</url>
         </repository>
     </repositories>
 
