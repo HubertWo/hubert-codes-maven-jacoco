@@ -69,14 +69,31 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.7</version>
                 <executions>
+                    <!-- Coverage for unit tests -->
                     <execution>
+                        <id>pre-unit-tests</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-                    <execution>gi
-                        <id>report</id>
+                    <execution>
+                        <id>after-unit-tests</id>
                         <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                    <!-- Coverage for integration tests -->
+                    <execution>
+                        <id>pre-integration-tests</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>after-integration-tests</id>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
